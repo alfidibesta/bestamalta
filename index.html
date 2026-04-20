@@ -321,11 +321,21 @@ body{
   overflow:hidden;position:relative;
   box-shadow:0 6px 28px rgba(100,60,40,.1);
 }
-.photo-arch img{width:100%;height:100%;object-fit:cover}
+/* foto utama: menutupi seluruh frame, z-index di atas placeholder */
+.photo-arch img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  z-index:2;
+  color:transparent; /* sembunyikan alt-text broken icon */
+}
+/* placeholder muncul di belakang foto */
 .photo-ph{
+  position:absolute;inset:0;
   width:100%;height:100%;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:8px;
+  z-index:1;
 }
 .photo-ph.groom{background:linear-gradient(160deg,#c8e8d4,#a8d4c0)}
 .photo-ph.bride{background:linear-gradient(160deg,#f8d8e4,#f0c0d4)}
@@ -435,11 +445,18 @@ body{
 .gal-item{overflow:hidden;border-radius:8px;position:relative}
 .gal-item.tall{grid-row:span 2}
 .gal-item.wide{grid-column:span 2}
+/* gallery img */
+.gal-item img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  z-index:2;color:transparent;
+}
 .gal-ph{
+  position:absolute;inset:0;
   width:100%;height:100%;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:8px;
-  transition:.35s var(--ease);
+  z-index:1;
 }
 .gal-ph.p1{background:linear-gradient(135deg,#f8d8e4,#f0e8f8)}
 .gal-ph.p2{background:linear-gradient(135deg,#c8e8d4,#d8f0e4)}
@@ -845,7 +862,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
         <!-- GROOM -->
         <div class="person rv2">
           <div class="photo-arch">
-            <img src="/images/besta.webp" alt="Besta Alfidi"/>
+            <img src="/images/besta.jpg" alt="Besta Alfidi" onerror="this.style.display='none'"/>
             <div class="photo-ph groom">
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(40,80,60,.4)" stroke-width=".9"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <span>Foto Pengantin</span>
@@ -869,7 +886,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
         <!-- BRIDE -->
         <div class="person rv2">
           <div class="photo-arch">
-            <img src="/images/malta.webp" alt="Malta Essa Asmaradani"/>
+            <img src="/images/malta.jpg" alt="Malta Essa Asmaradani" onerror="this.style.display='none'"/>
             <div class="photo-ph bride">
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(120,40,60,.35)" stroke-width=".9"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <span>Foto Pengantin</span>
@@ -976,11 +993,26 @@ select.fi option{background:var(--cream);color:var(--ink)}
     <div class="sec sec-center rv">
       <div class="sec-tag">Galeri</div>
       <div class="gal-grid">
-        <div class="gal-item tall"><div class="gal-ph p1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 1</span></div></div>
-        <div class="gal-item"><div class="gal-ph p2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 2</span></div></div>
-        <div class="gal-item"><div class="gal-ph p3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 3</span></div></div>
-        <div class="gal-item wide"><div class="gal-ph p4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto Prewedding</span></div></div>
-        <div class="gal-item"><div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div></div>
+        <div class="gal-item tall">
+          <img src="/images/galeri-1.jpg" alt="Foto 1" onerror="this.style.display='none'"/>
+          <div class="gal-ph p1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 1</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="/images/galeri-2.jpg" alt="Foto 2" onerror="this.style.display='none'"/>
+          <div class="gal-ph p2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 2</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="/images/galeri-3.jpg" alt="Foto 3" onerror="this.style.display='none'"/>
+          <div class="gal-ph p3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 3</span></div>
+        </div>
+        <div class="gal-item wide">
+          <img src="/images/galeri-4.jpg" alt="Foto Prewedding" onerror="this.style.display='none'"/>
+          <div class="gal-ph p4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto Prewedding</span></div>
+        </div>
+        <div class="gal-item">
+          <img src="/images/galeri-5.jpg" alt="Foto 5" onerror="this.style.display='none'"/>
+          <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
+        </div>
       </div>
       <p style="font-family:var(--sans);font-size:8px;letter-spacing:.15em;color:var(--inkSoft);opacity:.5;text-transform:uppercase">
         Ganti placeholder dengan foto asli menggunakan tag &lt;img&gt;
