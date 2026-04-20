@@ -133,53 +133,45 @@ body{
 @keyframes riseIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
 
 .c-pre{
-  font-family:var(--sans);font-size:8.5px;font-weight:300;
-  letter-spacing:.45em;text-transform:uppercase;
-  color:var(--inkSoft);margin-bottom:10px;
+  font-family:var(--sans);font-size:8px;font-weight:300;
+  letter-spacing:.36em;text-transform:uppercase;
+  color:var(--inkSoft);margin-bottom:8px;
 }
 
+/* "Besta" */
 .c-save{
-  font-family:var(--serif);
-  font-size:clamp(32px,9vw,52px);
-  font-weight:900;letter-spacing:.12em;
-  text-transform:uppercase;
+  font-family:var(--script);
+  font-size:clamp(44px,11vw,68px);
+  font-weight:700;
   color:var(--ink);line-height:1;
   margin-bottom:0;
 }
+/* "&" */
 .c-the{
-  font-family:var(--script);
-  font-size:clamp(36px,9vw,54px);
-  color:var(--rose);line-height:1;
-  margin:-4px 0;
-}
-.c-date-big{
   font-family:var(--serif);
-  font-size:clamp(32px,9vw,52px);
-  font-weight:900;letter-spacing:.12em;
-  text-transform:uppercase;
+  font-size:clamp(22px,5vw,30px);
+  font-style:italic;
+  color:var(--rose);line-height:1;
+  margin:2px 0;
+}
+/* "Malta" */
+.c-date-big{
+  font-family:var(--script);
+  font-size:clamp(44px,11vw,68px);
+  font-weight:700;
   color:var(--ink);line-height:1;
-  margin-bottom:16px;
+  margin-bottom:0;
 }
 
 .c-divline{
-  width:100px;height:1px;margin:14px auto;
+  width:120px;height:1px;margin:16px auto 14px;
   background:linear-gradient(to right,transparent,var(--rose),transparent);
 }
 
-.c-for{
-  font-family:var(--sans);font-size:9px;font-weight:300;
-  letter-spacing:.18em;text-transform:uppercase;
-  color:var(--inkSoft);margin-bottom:4px;
-}
-.c-couple{
-  font-family:var(--serif);font-size:clamp(13px,3.5vw,16px);
-  font-weight:700;letter-spacing:.06em;color:var(--ink);
-  margin-bottom:8px;
-}
 .c-details{
   font-family:var(--sans);font-size:clamp(10px,2.5vw,12px);
-  font-weight:300;letter-spacing:.06em;color:var(--inkMid);
-  line-height:1.8;margin-bottom:20px;
+  font-weight:300;letter-spacing:.08em;color:var(--inkMid);
+  line-height:1.9;margin-bottom:18px;
 }
 
 /* guest label */
@@ -562,7 +554,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
     <svg id="icPause" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
   </button>
   <div>
-    <div id="mLabel">♪ Wedding</div>
+    <div id="mLabel">♪ Musik</div>
     <div class="bars" id="bars"><span></span><span></span><span></span><span></span><span></span></div>
   </div>
 </div>
@@ -806,13 +798,11 @@ select.fi option{background:var(--cream);color:var(--ink)}
 
   <!-- COVER CONTENT -->
   <div class="cover-inner">
-    <p class="c-pre">We kindly request that you</p>
-    <div class="c-save">Save</div>
-    <div class="c-the">the</div>
-    <div class="c-date-big">Date</div>
+    <p class="c-pre">Pernikahan</p>
+    <div class="c-save">Besta</div>
+    <div class="c-the">&amp;</div>
+    <div class="c-date-big">Malta</div>
     <div class="c-divline"></div>
-    <p class="c-for">for the wedding of</p>
-    <p class="c-couple">Besta Alfidi &amp; Malta Essa Asmaradani</p>
     <p class="c-details">Sabtu, 26 September 2026<br/>Desa Kabuh, Jombang</p>
     <div class="c-guest-wrap">
       <p class="c-guest-pre">Kepada Yth.</p>
@@ -826,7 +816,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
 
   <div class="c-scroll">
     <div class="c-scroll-line"></div>
-    <span>Scroll</span>
+    <span>Gulir</span>
   </div>
 </section>
 
@@ -957,7 +947,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
 
   <!-- LOVE STORY -->
   <section class="sec rv">
-    <div class="sec-tag">Our Story</div>
+    <div class="sec-tag">Kisah Kami</div>
     <div class="timeline">
       <div class="tl-line"></div>
       <div class="tl-item rv2">
@@ -974,7 +964,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
       </div>
       <div class="tl-item rv2">
         <div class="tl-year">2026</div>
-        <div class="tl-card gold"><h4>Hari Bahagia 🌺</h4><p>Sabtu, 26 September 2026 — di Desa Kabuh, Jombang. Besta dan Malta mengucapkan janji suci di hadapan Allah dan orang-orang tercinta.</p></div>
+        <div class="tl-card gold"><h4>Hari Bahagia 🌺</h4><p>Sabtu, 26 September 2026 — di Desa Kabuh, Jombang. Besta dan Malta mengucapkan ijab kabul di hadapan Allah dan orang-orang tercinta.</p></div>
       </div>
     </div>
   </section>
@@ -1087,7 +1077,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
     </svg>
 
     <div style="position:relative;z-index:1">
-      <p class="foot-by">With love,</p>
+      <p class="foot-by">Dengan cinta,</p>
       <h2 class="foot-names">Besta &amp; Malta</h2>
       <p class="foot-quote">
         "Dan di antara tanda-tanda kekuasaan-Nya ialah<br/>
