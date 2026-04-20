@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1"
+    },
+    {
+      "src": "/(?!.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|webp)$).*",
+      "dest": "/index.html"
+    }
+  ]
+}
