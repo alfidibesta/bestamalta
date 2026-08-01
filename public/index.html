@@ -442,13 +442,14 @@ body{
     column-gap:8px;
   }
   .gal-item{
-    display:block;
-    width:100%;
-    margin:0 0 8px;
-    border-radius:8px;
+    background:var(--parchment);
     overflow:hidden;
-    break-inside:avoid;
+    border-radius:8px;
     position:relative;
+    contain:layout paint;
+    content-visibility:auto;
+    contain-intrinsic-size:auto 300px;
+    transform:translateZ(0);
   }
   /* reset properti grid lama, sudah tidak relevan di mode kolom */
   .gal-item.tall,.gal-item.wide{
@@ -461,6 +462,7 @@ body{
     width:100%;
     height:auto;      /* rasio asli foto, tidak di-crop */
     object-fit:unset;
+    aspect-ratio:auto;
   }
   .gal-ph{
     position:static;
@@ -1044,39 +1046,66 @@ select.fi option{background:var(--cream);color:var(--ink)}
       <div class="sec-tag">Galeri</div>
       <div class="gal-grid">
         <div class="gal-item tall">
-          <img src="/images/photo1.webp" alt="Foto 1" onerror="this.style.display='none'"/>
+          <img src="/images/photo1.webp" alt="Foto 1"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 1</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo3.webp" alt="Foto 2" onerror="this.style.display='none'"/>
+          <img src="/images/photo3.webp" alt="Foto 2"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 2</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo9.webp" alt="Foto 3" onerror="this.style.display='none'"/>
+          <img src="/images/photo9.webp" alt="Foto 3"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p3"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 3</span></div>
         </div>
         <div class="gal-item wide">
-          <img src="/images/photo11.webp" alt="Foto Prewedding" onerror="this.style.display='none'"/>
+          <img src="/images/photo11.webp" alt="Foto Prewedding"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto Prewedding</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo12.webp" alt="Foto 5" onerror="this.style.display='none'"/>
+          <img src="/images/photo12.webp" alt="Foto 5"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo3.webp" alt="Foto 5" onerror="this.style.display='none'"/>
+          <img src="/images/photo3.webp" alt="Foto 5"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo6.webp" alt="Foto 5" onerror="this.style.display='none'"/>
+          <img src="/images/photo6.webp" alt="Foto 5"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo13.webp" alt="Foto 5" onerror="this.style.display='none'"/>
+          <img src="/images/photo13.webp" alt="Foto 5"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
         </div>
         <div class="gal-item">
-          <img src="/images/photo7.webp" alt="Foto 5" onerror="this.style.display='none'"/>
+          <img src="/images/photo7.webp" alt="Foto 5"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none';this.parentElement.classList.add('broken')"/>
           <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
         </div>
       </div>
