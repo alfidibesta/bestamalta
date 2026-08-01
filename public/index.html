@@ -344,7 +344,7 @@ body{
 
 .p-role{font-family:var(--sans);font-size:7.5px;font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--rose)}
 .p-name{font-family:var(--script);font-size:clamp(24px,6vw,36px);color:var(--ink);line-height:1.05}
-.p-parents{font-family:var(--light);font-size:12px;font-style:italic;color:var(--inkSoft);line-height:1.9;text-align:center}
+.p-parents{font-family:var(--light);font-size:18px;font-style:italic;color:var(--inkSoft);line-height:1.9;text-align:center}
 .p-parents em{color:var(--inkMid);font-style:normal;font-weight:400}
 
 .heart-sep{display:flex;align-items:center;justify-content:center}
@@ -376,9 +376,9 @@ body{
 }
 .ecard-icon{color:var(--rose);margin-bottom:10px}
 .ecard-name{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:9px}
-.ecard-date{font-family:var(--sans);font-size:8.5px;font-weight:300;letter-spacing:.12em;color:var(--rose);margin-bottom:3px}
-.ecard-time{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--inkMid);margin-bottom:12px}
-.ecard-loc{display:flex;align-items:center;justify-content:center;gap:5px;font-family:var(--sans);font-size:9.5px;color:var(--inkSoft)}
+.ecard-date{font-family:var(--sans);font-size:14.5px;font-weight:300;letter-spacing:.12em;color:var(--rose);margin-bottom:3px}
+.ecard-time{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--inkMid);margin-bottom:12px}
+.ecard-loc{display:flex;align-items:center;justify-content:center;gap:5px;font-family:var(--sans);font-size:11.5px;color:var(--inkSoft);font-weight:800;}
 
 .btn-map{
   display:inline-flex;align-items:center;gap:8px;
@@ -428,8 +428,8 @@ body{
   border:1px solid rgba(200,96,122,.15);
   box-shadow:0 2px 12px rgba(100,60,40,.06);
 }
-.tl-card h4{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:5px}
-.tl-card p{font-family:var(--light);font-size:13px;font-style:italic;color:var(--inkSoft);line-height:1.85}
+.tl-card h4{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--ink);margin-bottom:5px}
+.tl-card p{font-family:var(--light);font-size:16px;font-style:italic;color:var(--inkSoft);line-height:1.85}
 .tl-item:nth-child(even) .tl-year{order:2;text-align:left}
 .tl-item:nth-child(even) .tl-card{order:1;text-align:right}
 .tl-card.gold{border-color:rgba(212,168,50,.4);background:linear-gradient(135deg,rgba(253,244,224,.8),rgba(248,234,208,.8))}
@@ -576,7 +576,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
   </div>
 </div>
 <audio id="audio" loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg"/>
+  <source src="/images/music.mp3" type="audio/mpeg"/>
 </audio>
 
 <!-- ══════════ COVER ══════════ -->
@@ -875,7 +875,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
 
         <!-- heart -->
         <div class="heart-sep rv2">
-          <svg width="54" height="54" viewBox="0 0 60 60">
+          <svg width="70" height="70" viewBox="0 0 60 60">
             <path d="M30 14 C22 14 15 20 15 28 C15 40 30 50 30 50 C30 50 45 40 45 28 C45 20 38 14 30 14Z"
                   fill="rgba(200,96,122,.18)" stroke="#c8607a" stroke-width="1.2"/>
             <text x="30" y="34" text-anchor="middle" fill="#c8607a" font-size="16"
@@ -893,7 +893,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
             </div>
           </div>
           <p class="p-role">Pengantin Wanita</p>
-          <h2 class="p-name">Malta Essa Asmaradani</h2>
+          <h2 class="p-name" style="text-align: center;">Malta Essa Asmaradani</h2>
           <p class="p-parents">Putri dari<br/><em>Bpk. Sujarwo</em><br/><em>&amp; Ibu Emi Suprapti (Bidan)</em></p>
         </div>
       </div>
@@ -916,10 +916,10 @@ select.fi option{background:var(--cream);color:var(--ink)}
         <p class="ecard-date">Sabtu, 5 September 2026</p>
         <p class="ecard-time">12.00 – Selesai</p>
         <div class="ecard-loc">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <!--<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>-->
           <span>Dusun Pendowo, Desa Kabuh, Kec. Kabuh, Kab. Jombang</span>
            <a href="https://maps.app.goo.gl/KUnzdnDGVBkocHQ7A" target="_blank" rel="noopener" class="btn-map">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Buka Google Maps
     </a>
         </div>
@@ -934,19 +934,19 @@ select.fi option{background:var(--cream);color:var(--ink)}
         <p class="ecard-date">Minggu, 13 September 2026</p>
         <p class="ecard-time">09.00 – 12.00 WIB</p>
         <div class="ecard-loc">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <!--<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>-->
           <span>Desa Kiringan RT O4 RW 01,Kec. Takeran, Kab Magetan</span>
-           <a href="https://maps.app.goo.gl/rqNndP2VAikj46Ki7" target="_blank" rel="noopener" class="btn-map">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+           <a href="https://maps.app.goo.gl/uCrF5q62wzhEjMUJ7" target="_blank" rel="noopener" class="btn-map">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Buka Google Maps
     </a>
         </div>
       </div>
     </div>
-    <a href="https://maps.google.com/?q=Desa+Kabuh+Jombang+Jawa+Timur" target="_blank" rel="noopener" class="btn-map">
+    <!--<a href="https://maps.google.com/?q=Desa+Kabuh+Jombang+Jawa+Timur" target="_blank" rel="noopener" class="btn-map">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       Buka Google Maps
-    </a>
+    </a>-->
   </section>
 
   <div class="sdiv"></div>
@@ -989,7 +989,7 @@ select.fi option{background:var(--cream);color:var(--ink)}
       </div>
       <div class="tl-item rv2">
         <div class="tl-year">2026</div>
-        <div class="tl-card gold"><h4>Hari Bahagia 🌺</h4><p>Sabtu, 26 September 2026 — di Desa Kabuh, Jombang. Besta dan Malta mengucapkan ijab kabul di hadapan Allah dan orang-orang tercinta.</p></div>
+        <div class="tl-card gold"><h4>Hari Bahagia 🌺</h4><p>Sabtu, 5 September 2026 — di Desa Kabuh, Jombang. Besta dan Malta mengucapkan ijab kabul di hadapan Allah dan orang-orang tercinta.</p></div>
       </div>
     </div>
   </section>
@@ -1022,9 +1022,9 @@ select.fi option{background:var(--cream);color:var(--ink)}
           <div class="gal-ph p5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(100,60,40,.25)" stroke-width=".9"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Foto 5</span></div>
         </div>
       </div>
-      <p style="font-family:var(--sans);font-size:8px;letter-spacing:.15em;color:var(--inkSoft);opacity:.5;text-transform:uppercase">
+      <!--<p style="font-family:var(--sans);font-size:8px;letter-spacing:.15em;color:var(--inkSoft);opacity:.5;text-transform:uppercase">
         Ganti placeholder dengan foto asli menggunakan tag &lt;img&gt;
-      </p>
+      </p>-->
     </div>
   </div>
 
@@ -1147,7 +1147,7 @@ function initReveal(){
 }
 
 // ── COUNTDOWN ───────────────────────────────────────────
-const WD=new Date('2026-09-5T08:00:00');
+const WD=new Date('2026-09-05T08:00:00');
 function tick(){
   const d=WD-Date.now();
   if(d<=0){['cdD','cdH','cdM','cdS'].forEach(id=>document.getElementById(id).textContent='00');return;}
