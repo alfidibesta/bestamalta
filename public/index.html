@@ -1237,7 +1237,7 @@ Dari : ${name}
 Semoga Allah memberkahi pernikahan Besta & Malta 🌺`;
 
   const url=`https://wa.me/${WA_UCAPAN}?text=${encodeURIComponent(waMsg)}`;
-  window.open(url,'_blank');
+  window.location.href = url;
 
   document.getElementById('wName').value='';
   document.getElementById('wMsg').value='';
