@@ -1130,6 +1130,11 @@ document.getElementById('btnOpen').addEventListener('click',()=>{
   cover.style.cssText+='transition:opacity .7s ease,transform .7s ease;opacity:0;transform:scale(1.02)';
   setTimeout(()=>{
     cover.style.display='none';
+    document.documentElement.style.overflow='';
+    document.body.style.overflow='';
+    document.body.style.position='';
+    document.body.style.height='';
+    document.body.style.width='';
     main.classList.add('show');
     requestAnimationFrame(()=>main.classList.add('fade'));
     window.scrollTo({top:0,behavior:'instant'});
