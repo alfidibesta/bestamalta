@@ -1236,8 +1236,16 @@ Dari : ${name}
 
 Semoga Allah memberkahi pernikahan Besta & Malta 🌺`;
 
-  const url=`https://wa.me/${WA_UCAPAN}?text=${encodeURIComponent(waMsg)}`;
+  function sendToWhatsApp(phone, message) {
+  const encoded = encodeURIComponent(message);
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  const url = isMobile
+    ? `whatsapp://send?phone=${phone}&text=${encoded}`   // langsung buka app
+    : `https://wa.me/${phone}?text=${encoded}`;            // desktop tetap via web/wa.me
+  
   window.location.href = url;
+}
 
   document.getElementById('wName').value='';
   document.getElementById('wMsg').value='';
