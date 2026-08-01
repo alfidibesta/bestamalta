@@ -1219,13 +1219,6 @@ document.getElementById('btnWish').addEventListener('click',()=>{
   if(!name){flash(document.getElementById('wName'));return;}
   if(!msg_text){flash(document.getElementById('wMsg'));return;}
 
-  // Simpan lokal juga untuk ditampilkan
-  const WK='wishes_besta_malta_2026';
-  const list=JSON.parse(localStorage.getItem(WK)||'[]');
-  list.push({n:name,m:msg_text,t:Date.now()});
-  localStorage.setItem(WK,JSON.stringify(list));
-  renderWishes();
-
   const waMsg=
 `🌸 *UCAPAN & DOA*
 Pernikahan Besta & Malta
@@ -1237,7 +1230,16 @@ Dari : ${name}
 Semoga Allah memberkahi pernikahan Besta & Malta 🌺`;
 
   const url=`https://wa.me/${WA_UCAPAN}?text=${encodeURIComponent(waMsg)}`;
-  window.open(url,'_blank');
+
+  // navigasi dulu, paling awal, masih dalam konteks gesture user
+  window.location.href = url;
+
+  // baru setelah itu urusan lain (aman, gak ganggu navigasi)
+  const WK='wishes_besta_malta_2026';
+  const list=JSON.parse(localStorage.getItem(WK)||'[]');
+  list.push({n:name,m:msg_text,t:Date.now()});
+  localStorage.setItem(WK,JSON.stringify(list));
+  renderWishes();
 
   document.getElementById('wName').value='';
   document.getElementById('wMsg').value='';
