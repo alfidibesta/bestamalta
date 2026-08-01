@@ -1120,7 +1120,8 @@ const WA_UCAPAN = '6287794844533'; // ← bisa sama atau beda
   const nama=raw?cap(decodeURIComponent(raw)):'Tamu Undangan';
   document.getElementById('guestName').textContent=nama;
   document.getElementById('guestInline').textContent=nama;
-  if(raw)document.getElementById('rName').value=nama;
+  const rNameEl = document.getElementById('rName');
+  if(raw && rNameEl) rNameEl.value = nama;
 })();
 
 // ── OPEN BUTTON ─────────────────────────────────────────
@@ -1190,26 +1191,26 @@ function tryPlay(){
 }
 
 // ── RSVP → WhatsApp ─────────────────────────────────────
-document.getElementById('btnRsvp').addEventListener('click',()=>{
-  const name=document.getElementById('rName').value.trim();
-  if(!name){flash(document.getElementById('rName'));return;}
-  const hadir=document.querySelector('input[name="h"]:checked').value;
-  const jumlah=document.getElementById('rCount').value;
+// document.getElementById('btnRsvp').addEventListener('click',()=>{
+//   const name=document.getElementById('rName').value.trim();
+//   if(!name){flash(document.getElementById('rName'));return;}
+//   const hadir=document.querySelector('input[name="h"]:checked').value;
+//   const jumlah=document.getElementById('rCount').value;
 
-  const msg=
-`🌺 *KONFIRMASI KEHADIRAN*
-Pernikahan Besta & Malta
-5 September 2026 | Desa Kabuh, Jombang
+//   const msg=
+// `🌺 *KONFIRMASI KEHADIRAN*
+// Pernikahan Besta & Malta
+// 5 September 2026 | Desa Kabuh, Jombang
 
-👤 Nama   : ${name}
-✅ Hadir   : ${hadir}
-👥 Jumlah : ${jumlah}
+// 👤 Nama   : ${name}
+// ✅ Hadir   : ${hadir}
+// 👥 Jumlah : ${jumlah}
 
-Terima kasih & sampai bertemu di hari bahagia kami! 🌸`;
+// Terima kasih & sampai bertemu di hari bahagia kami! 🌸`;
 
-  const url=`https://wa.me/${WA_RSVP}?text=${encodeURIComponent(msg)}`;
-  window.open(url,'_blank');
-});
+//   const url=`https://wa.me/${WA_RSVP}?text=${encodeURIComponent(msg)}`;
+//   window.open(url,'_blank');
+// });
 
 // ── UCAPAN → WhatsApp ────────────────────────────────────
 document.getElementById('btnWish').addEventListener('click',()=>{
